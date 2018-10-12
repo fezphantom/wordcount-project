@@ -1,0 +1,17 @@
+<h1>Word Count</h1>
+<h2>There are {{count}} words in your text</h2>
+
+<h3>Your text:</h3>
+{{ fulltext}}
+<br>
+<a href="{% url 'home'%}">Start again</a>
+<br>
+<br>
+{% for word,counttotal in words %}
+
+ {{word}} :- {{counttotal}} <br>
+
+{% endfor %}
+
+The sorted dict is {{ sorted_word }}
+<p>To know more about this project, visit the <a href="{%url 'about'%}"> about page</a></p>
